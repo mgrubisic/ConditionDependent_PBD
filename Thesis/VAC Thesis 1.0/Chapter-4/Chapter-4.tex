@@ -1,0 +1,595 @@
+\chapter{Methodology}
+
+A methodology that incorporates the different sources of cumulative damage in RC structures is proposed, the main elements that might induce damage in a structure are:
+
+\begin{itemize}
+	\item Corrosion
+	\item Strain aging
+	\item Low-cycle fatigue
+	\item Concrete Strength Aging
+\end{itemize}
+
+These effects generally affect the mechanical behavior of the materials, which are not considered when designing a structure. In the following paragraphs the different models available are studied and later incorporated into the analysis methodology.
+
+\section{Corrosion}
+
+One of the main phenomenon that affect the long term behavior of RC structures is corrosion of the reinforcing steel. Two types of corrosion are possible:
+\begin{itemize}
+		\item Carbonation, 
+		\item Chloride attack
+\end{itemize}
+
+The main source of corrosion in most RC structures is Chloride Attack and it is the one that is assumed in the present study.
+
+Corrosion of steel in concrete is an electrochemical process \cite{Mehta2014} this corrosion may be generated in two ways:
+\begin{itemize}
+	\item Composition cells may be formed when to dissimilar metals are embedded in concrete or when significant variations exist in the surface characteristics of steel
+	\item In the vicinity of steel concentration cells may be formed due to differences in the concentration of dissolved ions, such as alkalies and \textbf{chlorides}.
+\end{itemize}
+
+The corrosion process under chloride attack type of corrosion consists in first the protective film  on the reinforcing steel surface is destroyed, a process known as \textbf{depassivation}, then initiation of corrosion happens, the electrical resistivity and the oxygen content control corrosion. Figure \ref{fig:corr1} schematically show this process.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Chapter-4/figs/Corrosion_Process}
+\caption{Corrosion Process in Reinforcing Steel Bar \cite{Mehta2014}}
+\label{fig:corr1}
+\end{figure}
+
+
+A literature review to characterize corrosion in reinforcing steel is presented to model corrosion can be modeled, the corrosion process is an extensive field of research and to accurately incorporate it into the analysis it is necessary to incorporate the following components:
+
+\begin{enumerate}
+	\item Time to Initiation of Corrosion (Tcorr)
+	\item Corrosion growth in reinforcing steel
+	\item Mechanical Properties of Corroded Reinforcing Steel (fycorr, fucorr)
+	\item Cyclic Test on Corroded RC Columns
+	\item Flowchart of Corrosion Model Implemented
+\end{enumerate}
+
+ 
+\subsection{Time to Corrosion}
+
+Time to corrosion refers to the corrosion initiation at which the passivation of steel is destroyed and reinforcement starts corroding actively.
+\newline
+
+\textbf{Christensen Model}
+\newline
+
+Christensen \cite{Thoft-Christensen} main goal was to generate a corrosion model that was general for all concrete elements, additionally the authors tried to generate a model that also included the appearance of cracks due to corrosion that would evetually grow and the spall the concrete. More specifically related to reinforcing steel corrosion they developed a model based on Fick's law of diffusion to model the rate of chloride penetration into concrete as a function of concrete cover and time. 
+
+\begin{equation}
+	\frac{\partial C(x,t)}{\partial t} = D_c \frac{\partial C(x,t)}{\partial x^2}
+	\label{eq:one}
+\end{equation}
+
+After solving equation \ref{eq:one} the following expression results:
+\begin{equation}
+  T_{corr}=\frac{d^2}{4D_c} \left[erf^{-1}\left(\frac{C_{cr}-C_{0}}{C_1 -C_0}\right)\right]
+  \label{eq:two}
+\end{equation} 
+
+$d$: Concrete cover
+
+$D_0$: Diffusion coefficient
+
+$C_{0}$: Equilibrium Chloride Concentration
+
+$C_{cr}$: Critical chloride corrosion concentration
+\newline
+
+This model provides a means to calculate the Time for initiation of corrosion as a function of Concrete Cover and Diffusion concentration, the estimation of the Diffusion concentration depends on several factors such as environment, curing and water to cement ratio, however, it is not a reliable method to estimate the Time to Corrosion.
+\newline
+
+\textbf{Gosh \& Padgett Model}
+\newline
+
+Gosh et al calculate time to corrosion based on Thoft-Christensen model, considering in-field corrosion related studies of existing bridge components in the United States exposed to deicing salts to obtain mean values of chlorides concentration and put them in a modified version of the Thoft-Christensen Model.
+
+\begin{equation}
+T_{corr}=\frac{x^2}{4 D_c} \left[erf^{-1} \left(\frac{C_0-C_cr}{C_0} \right) \right]^{-2}
+  \label{eq.three}
+\end{equation} 
+
+$D_c: $ Diffusion Coefficient a recommended value of $1.29 \frac{cm^2}{year}$ is given in their study \citep{Ghosh2010}
+
+$C_0:$ Surface Chloride Concentration, recommended $(0.10)$
+ 
+$C_r:$ Critical Chloride Concentration, recommended $(0.04)$
+\newline
+
+While this model provides mean values for the time of initiation of corrosion, it is limited to environments that are controlled by \textbf{dicing salts only}.
+\newline
+
+\textbf{Life 365}
+\newline
+
+Is a software developed by a consortium of companies of the cementitious materials industries and academic institutions. This software relies on the studies summarized above, mainly using the Thoft-Christensen model, but as opposed to assuming dicing environments only, this software uses a database of chlorides concentration for different location in the USA and Canada, which gives more accurate results depending on the location and environment in which the structure is located..
+
+While this is a more robust model to obtain the initiation of corrosion since it considers the location and environment of the structure and it also has the ability to include other durability issues, it is difficult to implement in a batch run mode since the program is in a closed format.
+\newline
+
+\textbf{Liu \& Weyers Model}
+\newline
+
+This model tries to calculate the time to initiation of corrosion by calculating the amount of corroding products that are needed to fill the voids in the concrete cover that will eventually generate cracking in this area and therefore initiate the accelerated corrosion of the reinforcing steel this is characterized through the following set of equations:
+
+
+\begin{equation}
+  W_{crit}=\rho_{rust} \left[ \pi \left[ \frac{C f'_t}{E_{ef}} \left( \frac{a^2+b^2}{a^2-b^2}+\nu_c \right)+d_o \right] D+ \frac{W_{st}}{\rho_{st}} \right]
+  \label{eq.four}
+\end{equation} 
+
+\begin{equation}
+  T_{cr}=\frac{W_{crit}^2}{2k_p}
+  \label{eq.five}
+\end{equation} 
+
+\begin{equation}
+  k_p=0.098 (\frac{1}{\alpha})\pi Di_{corr}
+  \label{eq.six}
+\end{equation} 
+
+$W_{crit}$: Critical amount of corrosion needed to induce cracking.
+
+$W_{st}$: Mass of corroded steel.
+
+$\rho_{rust}$: Density of rust material.
+
+$\rho_{st}$: Density of steel.
+
+$f'_t$: Tensile strength of the concrete. 
+
+$E_{ef}$: Effective elastic modulus of concrete $E_{ef}=\frac{E_c}{1+\phi_{crit}}$ 
+
+$\phi_{crit}$ Creep coefficient of the concrete.
+
+$D$: Diameter of bar.
+
+$d_o$: Thickness of pore band around the steel/concrete interface.
+
+$\nu_c$: Poisson's ratio of concrete.
+
+$C$: Cover depth
+
+$a=\frac{D+2d_o}{2}$
+
+$b=C+\frac{D+2d_o}{2}$
+
+This model however is limited to corrosion on concrete slabs, since a series of experiments were developed to generate these equations, however, it is able predict the time to corrosion with great accuracy.
+
+\subsection{Rate of corrosion}
+
+\textbf{Vu et al. Model }
+\newline
+
+To estimate the loss of steel cross section due to corrosion a time dependent corrosion rate model was developed by \cite{Vu2000}, this model implies that corrosion diminishes with time. As corrosion accumulates with time around the steel, it precludes the uncorroded steel to react with the environment. The model is shown in \eref{eq.eight}.
+
+\begin{equation}
+  i_{corr}=\frac{37.5(1-w/c)}{d_c}
+  \label{eq.eight}
+\end{equation} 
+
+$w/c$: Water Cement ratio
+$d_c$: Cover depth
+
+In \fref{fig:hist1} the behavior of this model for different values of $w/c$ ratios is shown. It can be seen that at larger values of cover depth the rate of corrosion decreases rapidly and as the water cement ratio increases the rate of corrosion decreases.
+%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Chapter-4/figs/dcvsicor}
+\caption{Concrete cover depth vs rate of corrosion}
+\label{fig:hist1}
+\end{figure}
+
+From the Vu et al model the diameter degradation is calculated according to Choe et al as:
+
+\begin{equation}
+  d_{corr}=d_{bi}-\frac{1.0508(1-w/c)}{d_c} (t-t_{corr})^{0.71}
+  \label{eq.nine}
+\end{equation} 
+
+$d_{bi}$: Is the initial diameter of the bar
+
+The diameter is plotted in \fref{fig:hist2}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Chapter-4/figs/DiameterDecrease}
+\caption{Diameter decrease due to corrosion}
+\label{fig:hist2}
+\end{figure}
+
+These values would correspond to a level of corrosion that varies from 7\% corrosion to 21\% of corrosion for w/c ratios that ranges from 0.4 to 0.6
+The level of corrosion is calculated as:
+
+\begin{equation}
+  C=\frac{G_o-G}{g_ol_o} *100%
+  \label{eq.ten}
+\end{equation} 
+
+Then the Corrosion level is plotted as a function of time in \fref{fig:hist3}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Chapter-4/figs/CorrosionLevel}
+\caption{Corrosion Level vs Time (years)}
+\label{fig:hist3}
+\end{figure}
+
+\subsection{Corrosion modified properties of reinforcing steel bars}
+
+
+In a study presented by Yuan et al \cite{Yuan2017a} it was shown from experimental results that the mechanical properties of steel for different levels of corrosion could be modified for analysis as follows:
+
+\begin{equation}
+  f_{y,C}=f_{yo}(1-0.021C)
+  \label{eq.eleven}
+\end{equation} 
+
+\[
+  f_{u,C}=f_{yo}(1.018-0.019C)
+\]
+\[
+  \delta_{s,C}=\delta_{so}(1-0.021C)
+\]
+\[
+  \varepsilon_{y,C}=\varepsilon_{yo}(1-0.021C)
+\]
+
+\:
+\textbf{Choe et al. Model }
+\:
+Choe et al research is a seismic fragility estimates for RC columns subjected to corrosion, while the study is probabilistic in nature it defines the reduction in rebar cross section as:
+
+\begin{equation}
+	d_{b}(t)=d_{bi}-2\int_{T_{corr}}^{t} \lambda(t) dt
+\end{equation}
+
+Considering the model proposed by Vu et al the bar diameter degradation can be expressed as:
+
+\begin{equation}
+	d_{b}(t)=d_{bi}-\frac{1.508(1-\frac{w}{c})^-1.64}{d}(t-T_{corr})^0.71
+\end{equation}
+
+Where the diameter of the bar and the cover is in (mm).
+Pros:
+Easy way to calculate the reduction of bar diameter.
+Cons:
+The model carries out the assumptions made by Vu et al. concerning concentration of chlorides assumed and the diffusion assumed.
+
+With this information, the corrosion level is calculated as:
+
+\begin{equation}
+	CL=\frac{d_{i}-d(t)}{d_{i}}
+\end{equation}
+
+\subsection{Physical test on corroded RC Structures}
+
+%Figures Need to be Added. Also improved wording
+
+Recent studies \cite{Ma2012}, \cite{Meda2014} and \cite{Yang2016} have been developed to assess the force-displacement relationships in cantilever RC Columns. These columns were subjected to Quasi-Static Loading Protocol, the concrete columns were subjected to accelerated corrosion to obtain different Corrosion Levels ($CL$), the range of $CL$ for these studies correspond to $CL=0\%\-20\%$. In these studies the accelerated corrosion was performed via an electrochemical process directly applied to the reinforcing steel as shown in \fref{fig:Meda_RC_CorrosionProc}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/Meda_Corrosion}
+	\caption{Corrosion Process for RC Column \cite{Meda2014}}
+	\label{fig:Meda_RC_CorrosionProc}
+\end{figure}
+
+The resulting force displacement of these experiments is shown in \fref{fig:Meda_FD} it can be seen that there is a reduction not only on the strength of the system but also on the displacement capacity. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/Meda_F-D_01}
+	\caption{Corrosion Process for RC Column \cite{Meda2014}}
+	\label{fig:Meda_FD}
+\end{figure}
+
+As stated in the previous section the mechanical properties of steel are affected by corrosion, in the previous studies \cite{Meda2014} the authors performed tension tests on corroded reinforcing steel. In these tests a reduction in the mechanical properties of steel was observed as well as a reduction in the rupture strain $\varepsilon_{srup}$, see \fref{fig:Meda_RebarTest}. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/Meda_StressStrain}
+	\caption{Corroded Rebars Stress-Strain Curves \cite{Meda2014}}
+	\label{fig:Meda_RebarTest}
+\end{figure}
+
+While these studies provided an insight into how corroded RC Columns behave under cyclic loading, they did not considered the generation of the protective film due to the alkaline environment of the concrete, this film can modify mechanical properties of corroded steel. Additionally the accelerated corrosion process used a 3\% $NaCl$ concentration solution while the chloride attack in concrete usually has a 1.0\% - 1.5\% concentration of the same Chloride. Therefore the results obtained from these studies might not accurately represent the actual conditions of corroded RC columns, thus an experimental campaign is proposed that would shed a light into the properties of corroded reinforcing steel inside concrete and is discussed in the following subsection.
+
+\subsection{Proposed Experimental campaign}
+
+As explained in the previous section the steel inside concrete generates a protective film and after chloride attack reaches the surface of the steel, this protective film starts to be eliminated. This same process will be simulated through the following steps.
+\begin{enumerate}
+	\item Passivation of reinforcing steel
+	\item Accelerated corrosion  of Reinforcing Steel
+	\item Tension Tests
+	\item Buckled Bar Tension (BBT) Test
+\end{enumerate}
+
+\textbf{Passivation of reinforcing steel}
+
+Methods to generate the passive film on reinforcing steel are available in the literature \cite{Ghods2010}. According to this study it is possible to generate the passivation process in the same way as it occurs to reinforcing steel inside the concrete. A porous solution will be generated with the following concentrations:
+
+\begin{itemize}
+	\item Saturated Calcium Hydroxide $Ca(OH)_2$
+	\item Sodium Hydroxide $Na(OH)$ 4.00 g/l
+	\item Potassium Hydroxide $(OH)$ 11.22 g/l
+	\item Calcium Sulfate Dihydrate $Ca(SO)_4 + 2H_2O$ 13.77 g/l
+\end{itemize}
+
+The rebars will be placed in a container with the pore solution for a minimum of 8 days. Annodic Polarization Tests will be measured on the rebars to determine the passive current density. A figure of this process is shown in \fref{fig:RebarPassivation}. Additionally The ends of the rebars will be protected to prevent corrosion in these zones of the specimens, the protection at the ends is based from the standard ASTM G109-07 with some alterations. Figures \fref{fig:RebarSpecimenGeomtry} and \fref{fig:RebarEndsProtection} show the specimen geometry and the preparation of the ends of the rebars.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Chapter-4/figs/AnodicPolarization_01}
+	\caption{Rebars Passivation Process in Calcium Hydroxyde Pore Solution}
+	\label{fig:RebarPassivation}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/RebarSamples}
+	\caption{Rebar Specimen Geometry}
+	\label{fig:RebarSpecimenGeomtry}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/Rebar_Ends}
+	\caption{Rebars Ends Protection}
+	\label{fig:RebarEndsProtection}
+\end{figure}
+
+
+\textbf{Accelerated corrosion  of Reinforcing Steel}
+
+The accelerated corrosion will be done by using a galvanic cell. Different studies \cite{Ghods2010} has shown that for rebars with pasive films a concentration of 0.3 Moles of sodium chloride ($NaCl$) will start the depassivation process on the rebars. The rebars will be subjected to a current of . This current is sustained for a period of time according to Faraday's Law until the desired level of corrosion is reached:
+
+\begin{equation}
+	t=\frac{\lambda m_{loss} \eta_{specimen} C_{faraday}}{i M_{specimen}}
+	\label{eq.FaradayEq}
+\end{equation}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/AcceleratedCorrosionProcedure}
+	\caption{Accelerated Corrosion Process}
+	\label{fig:AcceleratedCorrosion}
+\end{figure}
+
+For the different rebar sizes and Corrosion levels the current and the Time of Application is shown in Table \ref{tab:AcceleratedCorrosionTime}. A current of $5 mA$ is applied to the specimen obtaining the time this current needs to be applied for.
+
+\begin{table}[htbp]
+	\caption{Accelerated Corrosion to achieve Corrosion Levels.}
+	\label{tab:AcceleratedCorrosionTime}
+	\centering	
+		\begin{tabular}{|l|c|c|}
+		\hline
+		Corrosion Level (CL) & Mass loss (g)   & time(days)     \\  \hline	
+		5\%                  & 1.12            & 9  \\  \hline	
+		10\%                 & 2.24            & 18 \\  \hline	
+		15\%                 & 3.36            & 27 \\  \hline	
+		20\%                 & 4.47            & 36 \\  \hline	
+		25\%                 & 5.59            & 45 \\  \hline	
+		\end{tabular}
+\end{table}
+
+
+\textbf{Tension Tests}
+
+Tension tests will be performed according to ASTM A706. The main objective of this tests is to evaluate differences in the Stress-Strain behavior of corroded Reinforcing Steel. This will help in determining any reduction in the ductility of steel for this condition.
+
+\textbf{Buckled Bar Tension (BBT) Test}
+
+One of the limit states that control Performance Based Design is Buckling of Reinforcing steel, recent tests have been developed to determine the critical bending strain of buckling of reinforced steel \cite{Barcley2019}. The premise of the BBT Test is a material test to simulate bending and tension strain demands on a buckled bar.However those results have been developed for rebars in pristine condition, it is therefore necessary to check if available expressions to determine this limit state hold for corroded steel.
+
+The Buckled Bar Tension Test consists in:
+
+\begin{enumerate}
+	\item Compress a rebar specimen up to a certain level of compression strain such that the rebar will show buckling
+	\item The rebar is then pulled untill rupture
+	\item process is repeated for different levels of compression strains 
+\end{enumerate}
+
+
+This test is proposed for different levels of corrosion such that any changes on the behavior are studied and incorporated into the analysis a sequence of the test procedure is shown in \fref{fig:BBTseq}. A proposed test matrix is shown in Table \ref{tab:Test Matrix}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Chapter-4/figs/BBT_Sequence}
+	\caption{BBT Test sequence}
+	\label{fig:BBTseq}
+\end{figure}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+	\caption{Corroded Rebar Test Matrix}
+	\label{tab:Test Matrix}
+	\centering	
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\cellcolor[HTML]{CC0000}{\color[HTML]{FFFFFF} Corroded BBT Test Matrix}}                                               \\ \hline
+	\multicolumn{1}{|l|}{Test}     & \multicolumn{1}{l|}{Diameter of Bar} & \multicolumn{1}{l|}{CL (\%)} & \multicolumn{1}{l|}{Number of Tests} \\ \hline
+	                               &                                      & 0                            & 3                                    \\ \cline{3-4} 
+	                               &                                      & 5                            & 3                                    \\ \cline{3-4} 
+	                               &                                      & 10                           & 3                                    \\ \cline{3-4} 
+	                               &                                      & 15                           & 3                                    \\ \cline{3-4} 
+	                               &                                      & 20                           & 3                                    \\ \cline{3-4} 
+	\multirow{-6}{*}{Tension Test} & \multirow{-6}{*}{\#6}                & 25                           & 3                                    \\ \hline
+	                               &                                      & 0                            & 6                                    \\ \cline{3-4} 
+	                               &                                      & 5                            & 6                                    \\ \cline{3-4} 
+	                               &                                      & 10                           & 6                                    \\ \cline{3-4} 
+	                               &                                      & 15                           & 6                                    \\ \cline{3-4} 
+	                               &                                      & 20                           & 6                                    \\ \cline{3-4} 
+	\multirow{-6}{*}{BBT Test}     & \multirow{-6}{*}{\#6}                & 25                           & 6                                    \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\subsection{Modeling of corrosion for Structural Analysis}
+
+The previous elements of corrosion explained in the previous sections are incorporated into the structural analysis mainly at the material level. The application can be outlined as follows:
+\begin{enumerate}
+	\item First the time for initiation of corrosion is calculated according to the Gosh and Padgett Model \cite{Ghosh2010}
+	\item Then the rate of corrosion is calculated according to the Vu et al model \cite{Vu2000}
+	\item Following this the size of the rebar is reduced and the corrosion level is calculated
+	\item Finally the mechanical properties of the reinforcing steel are modified with the corresponding corrosion level.
+\end{enumerate}
+
+This modeling can be better seen in \fref{fig:CorrModel}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Chapter-4/figs/Corrosion_Modeling}
+	\caption{Corrosion Modeling for Structural Analysis}
+	\label{fig:CorrModel}
+\end{figure}
+
+This is later incorporated into the Nonlinear Structural Analysis Framework using the package OpenSees \cite{McKenna2010}, the framework of this analysis is explained in \cite{Chapter-5}.
+
+\section{Steel Strain Aging}
+
+\subsection{Metallurgical Process}
+
+It is generally accepted that strain aging is due to the diffusion of carbon and/or nitrogen atoms in solution to dislocations that have been generated by plastic deformation. Initially, an atmosphere of carbon and nitrogen atoms is formed along the length of a dislocation, immobilizing it. Extended aging, however, results in sufficient carbon and nitrogen atoms for precipitates to form along the length of the dislocation.
+
+These precipitates impede the motion of subsequent dislocations, and result in some hardening and loss in ductility. The extent of strain aging, which is a thermally activated process, depends primarily on aging time and temperature. In general, extended aging results in a saturation value above which further aging has no effect.
+
+A second strengthening mechanism occurs when cold deformation (alone) is applied to steels. When dislocations break away for their pinning interstitial atoms and begin the movement causing slip they begin to intersect with each other. A complex series of interactions between the dislocations occurs, causing them to pin each other, decreasing their mobility. The decreased mobility also results in higher strength, lower ductility and lower toughness. As a result, cold deformed steels already have lowered ductility and toughness before any strain aging occurs and when heating follows cold deformation, the loss in ductility and toughness is greater. It is this combination of events that is the most damaging to the toughness of structural steels.
+
+\subsection{Strain aging effects in structures}
+
+Since it has already been established that strain aging is the process in which steel after being subjected to large strains develops an increased strength and reduced ductility with time and therefore important to include it in a time dependent analysis, considering the fact that plastic hinges will form in a ductile structure and the steel could reach high strains in this regions of the structure. Furthermore strain aging will cause an increased in the strength of the plastic hinge and as a consequence plastic hinges might be formed in regions of the structures that have not been designed for such demands. The effects of strain aging may also alter the transverse reinforcement due to both cold bending, making them susceptible to brittle failure.
+
+According to \cite{Restrepo-Posada1994} most strain aging occurs in the first 37 days. Also \cite{Momtahan2009} studied strain aging effects with respect to time for different levels of pre-strains that ranged from $2\varepsilon_y - 10\varepsilon_y$ and for a time frame of 3 days to 50 days, from this study it was determined that a significant effect of strain aging took place from pre-strains $5\varepsilon_y$ and on. Strains higher than $15\varepsilon_y$ indicate a performance level in which substantial damage has been induced in the structure such that it is deemed unrepairable and therefore pre-strains higher that $15\varepsilon_y$ are unpractical and not studied by Montahan et al\cite{Momtahan2009}.
+\\
+\textbf{Momtahan et al Strain Aging Effects in Yield Strength of Steel}
+
+Momtahan et al was able to correlate the increase in yield strength as a function of time and the pre-strain in reinforcing steel bars. The proposed equations are shown below:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Chapter-4/figs/StrainAging_TimeDependent}
+\caption{Strain Aging effect on Yield Strength vs Time (days)}
+\label{fig:hist4}
+\end{figure}
+
+
+For $10\varepsilon_y$
+
+\begin{equation}
+  \frac{f_y}{f_{yi}}=0.0026t+0.9838
+  \label{eq.twelve}
+\end{equation} 
+
+For $5\varepsilon_y$
+
+\begin{equation}
+  \frac{f_y}{f_{yi}}=0.0008t+0.996
+  \label{eq.thirteen}
+\end{equation} 
+
+For $2\varepsilon_y$
+
+\begin{equation}
+  \frac{f_y}{f_{yi}}=0.0004t+0.9979
+  \label{eq.fourteen}
+\end{equation} 
+
+It is proposed to limit the increase in yield strength to the one obtained at 50 days. These equations are plotted in \fref{fig:hist4}
+
+
+\section{Multiple Seismic Events}
+
+The evaluation of multiple seismic events is a topic that has been scarcely studied, however their effects have been felt in numerous earthquake sequences such as El Salvador, North Ridge, Chi-Chi among others. The main thought is that after a series of earthquake the structures accumulate damage and would eventually fail, this has been attempted as it was shown in \cite{Chapter-1}. 
+
+For this study it has been determined that not all damage in structures are dependent on multiple events but rather their condition when an event occours as is the case for corrosion. Other damage related phenomenons such as Strain Aging depend on the loading history and are therefore dependent on the history of extreme loading events. It is therefore proposed to study corrosion on a discrete modeling of Main Shocks each independent of the other and to study the effect on Strain Aging by using a sequence of Main Shocks.
+
+\subsection{Earthquake Selection}
+
+For this study the NGA2 West Database of earthquake records provided by the Pacific Earthquake and Engineering Research Insitute (PEER) \cite{Ancheta2014} is used. This database consists of 599 different Earthquake events that characterize theground motions on the west coast of the contiguous United States. The data was filteres to according to the following criteria:
+
+\begin{itemize}
+	\item Earthquake sequence
+	\item Moment Magnitude $M_w \geqslant 5$
+	\item $PGA>0.04$
+	\item $PGV>1$ cm/s
+	\item $Vs_{30}>100m/s$ \& $Vs_{30}<1000$ m/s
+	\item Lowest usable frequency is less than 1Hz
+	\item $R_{rup}<60km$
+\end{itemize}
+
+From this data the major earthquakes found are the following, the earthquakes can be sumarized in \fref{fig:MS_Selection} which show this earthquakes as moment magnitude {Mw} vs rupture distance ($R_{rup}$).
+
+\begin{itemize}
+	\item Chi-chi
+	\item Managua
+	\item Livermore
+	\item Northridge
+	\item Duzce 
+	\item Mammoth lake
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Chapter-4/figs/MainShock_Selection}
+	\caption{Mainshock selection from PEER NGA West2 Database}
+	\label{fig:MS_Selection}
+\end{figure}
+
+\subsection{Discrete Modeling of Main Shock Series}
+The discrete modeling of mainshocks consists in using individual earthquakes that accour at different times thorughout the life of the structures which correlate to a Corrosion Level (CL), this can be done for each of the main shocks selected after which the follogin data is obtained and later analyzed:
+
+\begin{itemize}
+	\item Maximum axial strain in Confined Concrete, Cover and Reinforcing steel 
+Strains
+	\item Obtain the probability of exceeding a given limit state $P(\varepsilon >\varepsilon_{LS},IM)$
+	\item The earthquakes are characterized according to an intensity measure
+
+\end{itemize}
+
+
+\subsection{Multiple Main Shock Series}
+
+To simulate the life of a structure a Mainshowck series consisting of 3 Mainshocks for a the life of a structure is considered, three phases are considered:
+\begin{enumerate}
+
+	\item at time $t=0$ the structure has pristine conditions
+	\item Mainshock 1 occours
+	\item Mainshock 2 occours
+	\item Mainshock 3 occours
+\end{enumerate}
+
+This is shown graphically in \fref{fig:MSSequence}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Chapter-4/figs/MainShock_Sequence}
+	\caption{Mainshock sequence example}
+	\label{fig:MSSequence}
+\end{figure}
+
+
+Then from the analysis the same results can be recorded
+
+\begin{itemize}
+	\item Maximum axial strain in Confined Concrete, Cover and Reinforcing steel 
+Strains
+	\item Obtain the probability of exceeding a given limit state $P(\varepsilon\varepsilon_{LS},IM)$
+	\item The earthquakes are characterized according to an intensity measure
+
+\end{itemize}
+
+\section{Future Topics}
+
+\begin{itemize}
+	\item Concrete Strength Aging
+	\item Welding and Fatigue in Steel Structures
+	\item Repair Effects
+	\item Main Shock - After Shock Series - Repair Series
+	\item Degree of damage effect on confined structures behavior
+\end{itemize}
