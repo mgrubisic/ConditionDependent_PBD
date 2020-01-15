@@ -9,10 +9,34 @@ In this chapter the available knowledge on the different topics that are availab
 There have been attempts by many researchers to stablish the best way to account for the accumulation of damage. 
 
 \subsection{Damage Index}
-That Cumulative Damage in structures have been tried to be established for structures to identify the state of a structure 
+The effect of commulative damage in structures was first studied by by Park and Ang (1985) \cite{Young-JiPark1985} in their study the authors proposed an expresion that intended to quantify damage in a structure and on the basis of it classify the extent of damage to recommend wether a structure could be used or not. This expresion was coined as the Damage Index ($D$) and it is exprssed as follows:
 
-The best-known and most widely used of all the cumulative damage index is that of Park and Ang (1985). This consists of a simple linear combination of normalized deformation and energy absorption: 
+\begin{equation}
+  D=\frac{\Delta_{m}}{\Delta_{u}}-\beta \frac{E_h}{F_{y}\Delta{u}}
+  \label{eq.DamageIndex}
+\end{equation} 
 
-The first term here is a simple, pseudo-static displacement measure. It takes no account of cumulative damage, which is accounted for solely by the energy term. The advantages of this model are its simplicity, and the fact that it has been calibrated against a significant amount of observed seismic damage, included some instances of shear and bond failures. Park, Ang and Wen (1985) suggested D = 0.4 as a threshold value between repairable and irreparable damage, while the same authors in 1987 suggested the following more detailed classification:
+$Delta_{m}$: Maximum deformation under earthquake
+
+$Delta_{u}$: Ultimate deformation under monotonic loading
+
+$F_{y}$: Calculated yield strength
+
+$E_{h}$: Total hysteretic energy
+
+$\beta$: Dimensionless constant 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Chapter-2/figs/Park_and_Ang_Model}
+\caption{Parkn and Ang conceptual scheme}
+\label{fig:Paa}
+\end{figure}
+
+This equation was derived for concrete elements. The first term here is a simple, pseudo-static displacement measure. It takes no account of cumulative damage, which is accounted for solely by the energy term. A figure on the concept is shown in \fref{fig:Paa}. The advantages of this model are its simplicity, and the fact that it has been calibrated against a significant amount of observed seismic damage, included some instances of shear and bond failures. Park, Ang and Wen (1985) suggested D = 0.4 as a threshold value between repairable and irreparable damage. 
+
+One of the disadvantages of this model is the need to calibrate the $\beta$ coefficient with observed damage, this value is typically a very low coefficient $\beta=0.05-0.1$ rendering the second term relatively inconsequential. 
+
+There have been several researchers who have used or modified this model to study the effects of cumulative damage for different structures and considerations of relevant importance are those performed by \cite{Kunnath1992}, who used a modified Park and Ang model, to model damagae at the local level for elements in a structural analysis program IDARC 3.0, in this software for the case of multiple degrees of freedom buildings they also added parameters to consider the damage at the inter-story level and the global model. Other studies \cite{Khashaee} have proposed an damage index that has a strong correlation with the portion of the earthquake energy that is associated with inelastic action, they used this damage index to perform a damage based design. While this studies provide insight into some of the characteristics of damage accumulation they rely on the Park and Ang model and therefore carry the issue of having a very low $\beta$ coefficient and thus the nonlinear portion of the structure is not considered.
 
 \subsection{Fragility Curves}

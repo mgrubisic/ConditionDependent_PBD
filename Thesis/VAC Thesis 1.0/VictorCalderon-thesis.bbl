@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -546,6 +546,96 @@
     \field{year}{2016}
   \endentry
 
+  \entry{Khashaee}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KP}{%
+         family={Khashaee},
+         familyi={K\bibinitperiod},
+         given={Payam},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=EM}{%
+         family={Eeri},
+         familyi={E\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+    }
+    \strng{namehash}{KPEM1}
+    \strng{fullhash}{KPEM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    The influences of the ground motion and structural characteristics on
+  damage potential of a 7-, a 13-, and a 20-story steel building are examined
+  using four sets of 40 accelerograms each, classified as soil sites B, C, D,
+  and E according to the 2003 International Building Code. The Park-Ang damage
+  index that has been used extensively during the past two decades is examined.
+  A new damage index based on ductility and stiffness degradation is proposed.
+  Results indicate that the proposed index correlates strongly with the energy
+  dissipated through inelastic action. The advantages and disadvantages of the
+  strength-based design approach are discussed and a seismic design procedure
+  based on damage is outlined.%
+    }
+    \verb{doi}
+    \verb 10.1193/1.1896366
+    \endverb
+    \field{number}{2}
+    \field{pages}{371\bibrangedash 387}
+    \field{title}{{Damage-based Seismic Design of Structures}}
+    \verb{url}
+    \verb http://earthquakespectra.org/doi/pdf/10.1193/1.1896366
+    \endverb
+    \field{volume}{21}
+    \verb{file}
+    \verb :C$\backslash$:/Users/user/AppData/Local/Mendeley Ltd./Mendeley Deskt
+    \verb op/Downloaded/Khashaee, Eeri - Unknown - Damage-based Seismic Design
+    \verb of Structures.pdf:pdf
+    \endverb
+    \field{journaltitle}{Earthquake Spectra}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Kunnath1992}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KSK}{%
+         family={Kunnath},
+         familyi={K\bibinitperiod},
+         given={S.\bibnamedelima K.},
+         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=RAM}{%
+         family={Reinhorn},
+         familyi={R\bibinitperiod},
+         given={A.\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LRF}{%
+         family={Lobo},
+         familyi={L\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KSKRAMLRF1}
+    \strng{fullhash}{KSKRAMLRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    University of Central Florida and University at Buffalo%
+    }
+    \field{number}{1992}
+    \field{pages}{1\bibrangedash 20}
+    \field{title}{{IDARC Version 3.0: A Program for the Inelastic Damage
+  Analysis of RC Structures}}
+    \field{volume}{818}
+    \field{year}{1992}
+  \endentry
+
   \entry{Ma2012}{article}{}
     \name{author}{3}{}{%
       {{hash=MY}{%
@@ -927,7 +1017,7 @@
     \name{author}{4}{}{%
       {{hash=RPJ}{%
          family={Restrepo-Posada},
-         familyi={R\bibinitperiod-P\bibinitperiod},
+         familyi={R\bibinithyphendelim P\bibinitperiod},
          given={J.I.},
          giveni={J\bibinitperiod},
       }}%
@@ -1057,7 +1147,7 @@
     \name{author}{1}{}{%
       {{hash=TCP}{%
          family={Thoft-Christensen},
-         familyi={T\bibinitperiod-C\bibinitperiod},
+         familyi={T\bibinithyphendelim C\bibinitperiod},
          given={Palle},
          giveni={P\bibinitperiod},
       }}%
@@ -1147,19 +1237,19 @@
          family={Yang},
          familyi={Y\bibinitperiod},
          given={Shu-Yan},
-         giveni={S\bibinitperiod-Y\bibinitperiod},
+         giveni={S\bibinithyphendelim Y\bibinitperiod},
       }}%
       {{hash=SXB}{%
          family={Song},
          familyi={S\bibinitperiod},
          given={Xiao-Bing},
-         giveni={X\bibinitperiod-B\bibinitperiod},
+         giveni={X\bibinithyphendelim B\bibinitperiod},
       }}%
       {{hash=JHX}{%
          family={Jia},
          familyi={J\bibinitperiod},
          given={Hong-Xue},
-         giveni={H\bibinitperiod-X\bibinitperiod},
+         giveni={H\bibinithyphendelim X\bibinitperiod},
       }}%
       {{hash=CX}{%
          family={Chen},
@@ -1171,7 +1261,7 @@
          family={Liu},
          familyi={L\bibinitperiod},
          given={Xi-La},
-         giveni={X\bibinitperiod-L\bibinitperiod},
+         giveni={X\bibinithyphendelim L\bibinitperiod},
       }}%
     }
     \keyw{Circular stiffness,Corroded RC column,Ductility,Energy
@@ -1219,6 +1309,59 @@
     \field{journaltitle}{Construction and Building Materials}
     \field{year}{2016}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Young-JiPark1985}{article}{}
+    \name{author}{3}{}{%
+      {{hash=YB}{%
+         family={{Young-Ji Park}},
+         familyi={Y\bibinitperiod},
+         given={By},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={{H-S Ang}},
+         familyi={H\bibinitperiod},
+         given={Alfredo},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AF}{%
+         family={Asce},
+         familyi={A\bibinitperiod},
+         given={F},
+         giveni={F},
+      }}%
+    }
+    \strng{namehash}{YBHAAF1}
+    \strng{fullhash}{YBHAAF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{abstract}{%
+    A model for evaluating structural damage in reinforced concrete structures
+  under earthquake ground motions is proposed. Damage is expressed as a linear
+  function of the maximum deformation and the effect of repeated cyclic
+  loading. Available static (monotonic) and dynamic (cyclic) test data were
+  analyzed to evaluate the statistics of the appropriate parameters of the
+  pro-posed damage model. The uncertainty in the ultimate structural capacity
+  was also examined.%
+    }
+    \field{number}{4}
+    \field{pages}{722\bibrangedash 739}
+    \field{title}{{Mechanistic seismic damage model for reinforced concrete}}
+    \verb{url}
+    \verb https://ascelibrary.org/doi/pdf/10.1061/{\%}28ASCE{\%}290733-9445{\%}
+    \verb 281985{\%}29111{\%}3A4{\%}28722{\%}29
+    \endverb
+    \field{volume}{111}
+    \verb{file}
+    \verb :C$\backslash$:/Users/user/AppData/Local/Mendeley Ltd./Mendeley Deskt
+    \verb op/Downloaded/Young-Ji Park, H-S Ang, Asce - Unknown - MECHANISTIC SE
+    \verb ISMIC DAMAGE MODEL FOR REINFORCED CONCRETE.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Structural Engineering}
+    \field{year}{1985}
   \endentry
 
   \entry{Yuan2017a}{article}{}
