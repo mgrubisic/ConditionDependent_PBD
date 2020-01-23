@@ -41,5 +41,33 @@ Depite its limitation, several studies have used or modified this model to study
 
 Krawinkler (1987) \cite{Krawinkler1987} proposed a method that would consider damage as a function of low cycle fatigue parameters, the form of this damage index for Steel Component, Weldements and local buckling have a general shape of the Miner model. This model relies on the accumulation of plastic deformations. While this model has proven to work well for the evaluation of individual elements it does not provide a way to generalize damage for other types of structures.
 
-\subsection{Fragility Curves}
+\subsection{Probabilistic Approach}
 
+Increasing interest on the effect of cumulative damage has been experienced over recent years. These studies have focused on determining what is the increase in the risk of a structure due to the accumulation of factors due to many reasons such as multiple earthquakes, corrosion and life span of the structure. Two main approaches have been observed:
+
+\begin{itemize}
+	\item Probabilistic Framework
+	\item Fragility Curves
+\end{itemize}
+
+Proababilistic network
+
+One of the most widely used probabilistic network is the Pacific Earthquake Engineering Research Center (PEER) Performance Based Design. PEER PBD can be expressed by the following equation:
+\begin{equation}
+\nu_{DM}(dm^{LS})=\iint D_{DM|EDP}(dm|edp)|,dG_{EDP|IM}(edp|im)||\,d\nu_{IM}(im)|
+\end{equation}
+
+Mackie et al \cite{Mackie2007} on the basis of the PEER PBD developed the Performance Based Damage Design (PBDD) and Perfomance Based Loss Design (PBLD) by defining the probabilistic demand, damage, and loss model parameters in terms of reinforced concrete column damage. The RC column damage was defined on terms of drift ratios defined for the limit states of concrete spalling, bar buckling and failure. 
+
+The authors show that for a given intensity measure (IM) and a confidence level of achieving a limit state, its is possible then to define the probability  of exceeding that limit state.
+
+While this methodology was able to define damage and incorporate it into the PEER PBD framework, the authors did not consider a better way to establish a limit state such as strains. Also recent research has shown that other intensity measures such as spectral displacement at effective fir mode period provide a better intensity measure.
+
+
+Fragility Curves
+
+Another common trend in this subject is the use of fragility curves to estimate the effect of damage in structures. Two main approaches were found one of them relied on the Park and Ang Model Damage Index to define damage. The second approach relates damage to drift.
+
+%Mention the three papers from Jaime Padget
+
+While these studies provide a general view on how damage increases the likelihood of observing damage the methods used to arrive to those conclusions can be misleading since the definition of damage as either a Damage Index or Drift does not necessarily represent a quantifiable measure of damage it is our belief that strain based limit states will provide a better understanding and implications on the damage accumulation.

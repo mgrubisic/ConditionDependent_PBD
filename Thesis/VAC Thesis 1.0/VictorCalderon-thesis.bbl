@@ -439,6 +439,71 @@
     \field{year}{2010}
   \endentry
 
+  \entry{Ghosh2015}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GJ}{%
+         family={Ghosh},
+         familyi={G\bibinitperiod},
+         given={Jayadipta},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PJE}{%
+         family={Padgett},
+         familyi={P\bibinitperiod},
+         given={Jamie\bibnamedelima E},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=SSM}{%
+         family={S{\'{a}}nchez-Silva},
+         familyi={S\bibinithyphendelim S\bibinitperiod},
+         given={Mauricio},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GJPJESSM1}
+    \strng{fullhash}{GJPJESSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    Civil infrastructures, such as highway bridges, located in seismically
+  active regions are often subjected to multiple earthquakes, including
+  multiple main shocks during their service life or main shock–aftershock
+  sequences. Repeated seismic events result in reduced structural capacity and
+  may lead to bridge col- lapse, causing disruption in the normal functioning
+  of transportation networks. This study proposes a framework to predict damage
+  accumulation in structures subjected to multiple shock scenarios after
+  developing damage index prediction models and accounting for the
+  probabilistic nature of the hazard. The versatility of the proposed framework
+  is demonstrated on a case-study highway bridge located in California for two
+  distinct hazard scenarios: (1) multiple main shocks during the service life
+  and (2) multiple aftershock earthquake occurrences follow- ing a single main
+  shock. Results reveal that in both cases there is a significant increase in
+  damage index exceedance probabilities due to repeated shocks within the time
+  window of interest.%
+    }
+    \verb{doi}
+    \verb 10.1193/120812EQS347M
+    \endverb
+    \field{number}{1}
+    \field{pages}{115\bibrangedash 135}
+    \field{title}{{Seismic Damage Accumulation in Highway Bridges in
+  Earthquake-Prone Regions}}
+    \verb{url}
+    \verb http://www.earthquakespectra.org/doi/pdf/10.1193/120812EQS347M
+    \endverb
+    \field{volume}{31}
+    \verb{file}
+    \verb :C$\backslash$:/Users/user/AppData/Local/Mendeley Ltd./Mendeley Deskt
+    \verb op/Downloaded/Ghosh, Padgett, S{\'{a}}nchez-Silva - 2015 - Seismic Da
+    \verb mage Accumulation in Highway Bridges in Earthquake-Prone Regions.pdf:
+    \verb pdf
+    \endverb
+    \field{journaltitle}{Earthquake Spectra}
+    \field{year}{2015}
+  \endentry
+
   \entry{Goodnight2013}{article}{}
     \name{author}{3}{}{%
       {{hash=GJC}{%
@@ -598,6 +663,32 @@
     \field{year}{2005}
   \endentry
 
+  \entry{Krawinkler1987}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KH}{%
+         family={Krawinkler},
+         familyi={K\bibinitperiod},
+         given={Helmut},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KH1}
+    \strng{fullhash}{KH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    This paper present a methodology%
+    }
+    \field{number}{1}
+    \field{pages}{27\bibrangedash 41}
+    \field{title}{{Performance Assessment of Steel Component}}
+    \field{volume}{3}
+    \field{journaltitle}{Earthquake Spectra}
+    \field{year}{1987}
+  \endentry
+
   \entry{Kunnath1992}{article}{}
     \name{author}{3}{}{%
       {{hash=KSK}{%
@@ -704,6 +795,74 @@
     \endverb
     \field{journaltitle}{Construction and Building Materials}
     \field{year}{2012}
+  \endentry
+
+  \entry{Mackie2007}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MKR}{%
+         family={Mackie},
+         familyi={M\bibinitperiod},
+         given={K.\bibnamedelima R.},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Stojadinovi{\'{c}}},
+         familyi={S\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley {\&} Sons, Ltd.}%
+    }
+    \keyw{confidence level,highway bridge,performance
+  objective,performance‐based earthquake engineering,repair cost ratio}
+    \strng{namehash}{MKRSB1}
+    \strng{fullhash}{MKRSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    Recent efforts in the earthquake engineering community have focused largely
+  on developing a performancebased earthquake engineering assessment
+  methodology. However, equally important is applying such a methodology to the
+  design of structures. Probabilistic performance-based seismic design enables
+  design and acceptance criteria to be specified by a continuum of limit states
+  and incorporates uncertainty in all the sources of data. This paper
+  introduces a non-iterative method, based on the Pacific Earthquake
+  Engineering Research Center framework, for design of bridge structures in
+  terms of single or multiple physical design parameters, such as column height
+  and diameter. Design parameter solutions are obtained from explicit
+  consideration of uncertainty in the hazard, demand, damage, and loss to the
+  structure by way of specifying a level of confidence in the resulting design
+  under different performance objectives. Similar to other performance-based
+  methodologies, performance objectives consist of a performance level and a
+  hazard level. Design equations are derived for performance levels defined in
+  terms of bridge damage and loss. Examples are presented of both univariate
+  and bivariate design parameter cases for typical reinforced concrete highway
+  overpass bridges in California.%
+    }
+    \verb{doi}
+    \verb 10.1002/eqe.699
+    \endverb
+    \field{issn}{00988847}
+    \field{number}{13}
+    \field{pages}{1953\bibrangedash 1971}
+    \field{title}{{Performance-based seismic bridge design for damage and loss
+  limit states}}
+    \verb{url}
+    \verb http://doi.wiley.com/10.1002/eqe.699
+    \endverb
+    \field{volume}{36}
+    \verb{file}
+    \verb :C$\backslash$:/Users/user/AppData/Local/Mendeley Ltd./Mendeley Deskt
+    \verb op/Downloaded/Mackie, Stojadinovi{\'{c}} - 2007 - Performance-based s
+    \verb eismic bridge design for damage and loss limit states.pdf:pdf
+    \endverb
+    \field{journaltitle}{Earthquake Engineering {\&} Structural Dynamics}
+    \field{year}{2007}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Mander1988}{article}{}

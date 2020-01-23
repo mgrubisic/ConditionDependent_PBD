@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  14 JAN 2020 23:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  23 JAN 2020 14:58
 entering extended mode
 **./VictorCalderon-thesis.tex
 (VictorCalderon-thesis.tex
@@ -1539,6 +1539,11 @@ Package biblatex Warning: BibTeX reported the following issues
 
 
 Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Mackie2007':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'McKenna2010':
 (biblatex)                - Invalid format of field 'month'.
 
@@ -1667,18 +1672,19 @@ Chapter 2.
 
 
 ]
-<Chapter-2/figs/Park_and_Ang_Model.png, id=44, 432.71663pt x 421.87613pt>
+<Chapter-2/figs/Park_and_Ang_Model.png, id=46, 432.71663pt x 421.87613pt>
 File: Chapter-2/figs/Park_and_Ang_Model.png Graphic file (type png)
 <use Chapter-2/figs/Park_and_Ang_Model.png>
 Package pdftex.def Info: Chapter-2/figs/Park_and_Ang_Model.png  used on input l
 ine 31.
 (pdftex.def)             Requested size: 406.516pt x 396.35118pt.
- [4 <./Chapter-2/figs/Park_and_Ang_Model.png>]) [5]
+ [4 <./Chapter-2/figs/Park_and_Ang_Model.png>] [5]) [6]
 \openout2 = `Chapter-3/Chapter-3.aux'.
 
- (Chapter-3/Chapter-3.tex
+
+(Chapter-3/Chapter-3.tex
 Chapter 3.
-<Chapter-2/figs/color.pdf, id=56, 578.16pt x 433.62pt>
+<Chapter-2/figs/color.pdf, id=61, 578.16pt x 433.62pt>
 File: Chapter-2/figs/color.pdf Graphic file (type pdf)
 <use Chapter-2/figs/color.pdf>
 Package pdftex.def Info: Chapter-2/figs/color.pdf  used on input line 11.
@@ -1695,27 +1701,27 @@ Package pdftex.def Info: Chapter-2/figs/color.pdf  used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6
+[7
 
 
 
-] [7 <./Chapter-2/figs/color.pdf>] [8]
+] [8 <./Chapter-2/figs/color.pdf>] [9]
 \openout2 = `Chapter-4/Chapter-4.aux'.
 
  (Chapter-4/Chapter-4.tex
 Chapter 4.
-[9
+[10
 
 
 
 ]
-<Chapter-4/figs/Corrosion_Process.png, id=121, 922.94812pt x 591.71063pt>
+<Chapter-4/figs/Corrosion_Process.png, id=126, 922.94812pt x 591.71063pt>
 File: Chapter-4/figs/Corrosion_Process.png Graphic file (type png)
 <use Chapter-4/figs/Corrosion_Process.png>
 Package pdftex.def Info: Chapter-4/figs/Corrosion_Process.png  used on input li
 ne 34.
 (pdftex.def)             Requested size: 406.516pt x 260.61531pt.
- [10 <./Chapter-4/figs/Corrosion_Process.png>]
+ [11 <./Chapter-4/figs/Corrosion_Process.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
@@ -1740,7 +1746,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
-[11]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
@@ -1765,55 +1771,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
-<Chapter-4/figs/dcvsicor.pdf, id=136, 691.24919pt x 504.64647pt>
+<Chapter-4/figs/dcvsicor.pdf, id=139, 691.24919pt x 504.64647pt>
 File: Chapter-4/figs/dcvsicor.pdf Graphic file (type pdf)
 <use Chapter-4/figs/dcvsicor.pdf>
 Package pdftex.def Info: Chapter-4/figs/dcvsicor.pdf  used on input line 180.
 (pdftex.def)             Requested size: 406.516pt x 296.784pt.
-[13]
-<Chapter-4/figs/DiameterDecrease.pdf, id=141, 688.52502pt x 502.6033pt>
+[14]
+<Chapter-4/figs/DiameterDecrease.pdf, id=144, 688.52502pt x 502.6033pt>
 File: Chapter-4/figs/DiameterDecrease.pdf Graphic file (type pdf)
 <use Chapter-4/figs/DiameterDecrease.pdf>
 Package pdftex.def Info: Chapter-4/figs/DiameterDecrease.pdf  used on input lin
 e 198.
 (pdftex.def)             Requested size: 406.516pt x 296.74811pt.
-<Chapter-4/figs/CorrosionLevel.pdf, id=142, 794.97pt x 614.295pt>
+<Chapter-4/figs/CorrosionLevel.pdf, id=145, 794.97pt x 614.295pt>
 File: Chapter-4/figs/CorrosionLevel.pdf Graphic file (type pdf)
 <use Chapter-4/figs/CorrosionLevel.pdf>
 Package pdftex.def Info: Chapter-4/figs/CorrosionLevel.pdf  used on input line 
 215.
 (pdftex.def)             Requested size: 406.516pt x 314.1299pt.
- [14 <./Chapter-4/figs/dcvsicor.pdf>] [15 <./Chapter-4/figs/DiameterDecrease.pd
-f>] [16 <./Chapter-4/figs/CorrosionLevel.pdf>] [17]
-<Chapter-4/figs/Meda_Corrosion.png, id=191, 362.25337pt x 203.86162pt>
+ [15 <./Chapter-4/figs/dcvsicor.pdf>] [16 <./Chapter-4/figs/DiameterDecrease.pd
+f>] [17 <./Chapter-4/figs/CorrosionLevel.pdf>] [18]
+<Chapter-4/figs/Meda_Corrosion.png, id=194, 362.25337pt x 203.86162pt>
 File: Chapter-4/figs/Meda_Corrosion.png Graphic file (type png)
 <use Chapter-4/figs/Meda_Corrosion.png>
 Package pdftex.def Info: Chapter-4/figs/Meda_Corrosion.png  used on input line 
 274.
 (pdftex.def)             Requested size: 406.516pt x 228.77136pt.
-<Chapter-4/figs/Meda_F-D_01.png, id=192, 372.79276pt x 238.18988pt>
+<Chapter-4/figs/Meda_F-D_01.png, id=195, 372.79276pt x 238.18988pt>
 File: Chapter-4/figs/Meda_F-D_01.png Graphic file (type png)
 <use Chapter-4/figs/Meda_F-D_01.png>
 Package pdftex.def Info: Chapter-4/figs/Meda_F-D_01.png  used on input line 283
 .
 (pdftex.def)             Requested size: 406.516pt x 259.74174pt.
-<Chapter-4/figs/Meda_StressStrain.png, id=193, 256.5585pt x 168.63pt>
+<Chapter-4/figs/Meda_StressStrain.png, id=196, 256.5585pt x 168.63pt>
 File: Chapter-4/figs/Meda_StressStrain.png Graphic file (type png)
 <use Chapter-4/figs/Meda_StressStrain.png>
 Package pdftex.def Info: Chapter-4/figs/Meda_StressStrain.png  used on input li
 ne 292.
 (pdftex.def)             Requested size: 406.516pt x 267.21982pt.
- [18 <./Chapter-4/figs/Meda_Corrosion.png>] [19 <./Chapter-4/figs/Meda_F-D_01.p
-ng>] [20 <./Chapter-4/figs/Meda_StressStrain.png>]
+ [19 <./Chapter-4/figs/Meda_Corrosion.png>] [20 <./Chapter-4/figs/Meda_F-D_01.p
+ng>] [21 <./Chapter-4/figs/Meda_StressStrain.png>]
 
 pdfTeX warning: pdflatex (file ./Chapter-4/figs/AnodicPolarization_01.pdf): PDF
  inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter-4/figs/AnodicPolarization_01.pdf, id=203, 1226.83344pt x 345.48676pt>
+<Chapter-4/figs/AnodicPolarization_01.pdf, id=206, 1226.83344pt x 345.48676pt>
 File: Chapter-4/figs/AnodicPolarization_01.pdf Graphic file (type pdf)
 <use Chapter-4/figs/AnodicPolarization_01.pdf>
 Package pdftex.def Info: Chapter-4/figs/AnodicPolarization_01.pdf  used on inpu
@@ -1823,7 +1829,7 @@ t line 324.
 
 pdfTeX warning: pdflatex (file ./Chapter-4/figs/RebarSamples.pdf): PDF inclusio
 n: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter-4/figs/RebarSamples.pdf, id=204, 1194.21683pt x 226.50522pt>
+<Chapter-4/figs/RebarSamples.pdf, id=207, 1194.21683pt x 226.50522pt>
 File: Chapter-4/figs/RebarSamples.pdf Graphic file (type pdf)
 <use Chapter-4/figs/RebarSamples.pdf>
 Package pdftex.def Info: Chapter-4/figs/RebarSamples.pdf  used on input line 33
@@ -1833,26 +1839,26 @@ Package pdftex.def Info: Chapter-4/figs/RebarSamples.pdf  used on input line 33
 
 pdfTeX warning: pdflatex (file ./Chapter-4/figs/Rebar_Ends.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter-4/figs/Rebar_Ends.pdf, id=205, 749.81871pt x 369.12003pt>
+<Chapter-4/figs/Rebar_Ends.pdf, id=208, 749.81871pt x 369.12003pt>
 File: Chapter-4/figs/Rebar_Ends.pdf Graphic file (type pdf)
 <use Chapter-4/figs/Rebar_Ends.pdf>
 Package pdftex.def Info: Chapter-4/figs/Rebar_Ends.pdf  used on input line 338.
 
 (pdftex.def)             Requested size: 406.516pt x 200.11598pt.
-[21 <./Chapter-4/figs/AnodicPolarization_01.pdf>] [22 <./Chapter-4/figs/RebarSa
+[22 <./Chapter-4/figs/AnodicPolarization_01.pdf>] [23 <./Chapter-4/figs/RebarSa
 mples.pdf> <./Chapter-4/figs/Rebar_Ends.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapter-4/figs/AcceleratedCorrosionProcedure.p
 df): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter-4/figs/AcceleratedCorrosionProcedure.pdf, id=257, 1228.59pt x 794.97pt
+<Chapter-4/figs/AcceleratedCorrosionProcedure.pdf, id=261, 1228.59pt x 794.97pt
 >
 File: Chapter-4/figs/AcceleratedCorrosionProcedure.pdf Graphic file (type pdf)
 <use Chapter-4/figs/AcceleratedCorrosionProcedure.pdf>
 Package pdftex.def Info: Chapter-4/figs/AcceleratedCorrosionProcedure.pdf  used
  on input line 355.
 (pdftex.def)             Requested size: 406.516pt x 263.04446pt.
-[23 <./Chapter-4/figs/AcceleratedCorrosionProcedure.pdf>]
-<Chapter-4/figs/BBT_Sequence.png, id=264, 446.41782pt x 248.42813pt>
+[24 <./Chapter-4/figs/AcceleratedCorrosionProcedure.pdf>]
+<Chapter-4/figs/BBT_Sequence.png, id=267, 446.41782pt x 248.42813pt>
 File: Chapter-4/figs/BBT_Sequence.png Graphic file (type png)
 <use Chapter-4/figs/BBT_Sequence.png>
 Package pdftex.def Info: Chapter-4/figs/BBT_Sequence.png  used on input line 39
@@ -1863,48 +1869,48 @@ Package pdftex.def Info: Chapter-4/figs/BBT_Sequence.png  used on input line 39
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 408.
 
-<Chapter-4/figs/Corrosion_Modeling.pdf, id=265, 316.00058pt x 204.99084pt>
+<Chapter-4/figs/Corrosion_Modeling.pdf, id=268, 316.00058pt x 204.99084pt>
 File: Chapter-4/figs/Corrosion_Modeling.pdf Graphic file (type pdf)
 <use Chapter-4/figs/Corrosion_Modeling.pdf>
 Package pdftex.def Info: Chapter-4/figs/Corrosion_Modeling.pdf  used on input l
 ine 446.
 (pdftex.def)             Requested size: 316.17987pt x 205.12483pt.
 
-LaTeX Warning: Citation 'Chapter-5' on page 24 undefined on input line 451.
+LaTeX Warning: Citation 'Chapter-5' on page 25 undefined on input line 451.
 
-[24] [25 <./Chapter-4/figs/BBT_Sequence.png>] [26 <./Chapter-4/figs/Corrosion_M
+[25] [26 <./Chapter-4/figs/BBT_Sequence.png>] [27 <./Chapter-4/figs/Corrosion_M
 odeling.pdf, page is rotated 90 degrees>]
-<Chapter-4/figs/StrainAging_TimeDependent.pdf, id=286, 690.56824pt x 503.28438p
+<Chapter-4/figs/StrainAging_TimeDependent.pdf, id=289, 690.56824pt x 503.28438p
 t>
 File: Chapter-4/figs/StrainAging_TimeDependent.pdf Graphic file (type pdf)
 <use Chapter-4/figs/StrainAging_TimeDependent.pdf>
 Package pdftex.def Info: Chapter-4/figs/StrainAging_TimeDependent.pdf  used on 
 input line 475.
 (pdftex.def)             Requested size: 406.516pt x 296.26709pt.
- [27] [28 <./Chapter-4/figs/StrainAging_TimeDependent.pdf>]
+ [28] [29 <./Chapter-4/figs/StrainAging_TimeDependent.pdf>]
 
-LaTeX Warning: Citation 'Chapter-1' on page 29 undefined on input line 507.
+LaTeX Warning: Citation 'Chapter-1' on page 30 undefined on input line 507.
 
-[29]
-<Chapter-4/figs/MainShock_Selection.png, id=315, 389.20406pt x 361.35pt>
+[30]
+<Chapter-4/figs/MainShock_Selection.png, id=318, 389.20406pt x 361.35pt>
 File: Chapter-4/figs/MainShock_Selection.png Graphic file (type png)
 <use Chapter-4/figs/MainShock_Selection.png>
 Package pdftex.def Info: Chapter-4/figs/MainShock_Selection.png  used on input 
 line 538.
 (pdftex.def)             Requested size: 271.01526pt x 251.62549pt.
- [30 <./Chapter-4/figs/MainShock_Selection.png>]
-<Chapter-4/figs/MainShock_Sequence.png, id=319, 836.3747pt x 241.65282pt>
+ [31 <./Chapter-4/figs/MainShock_Selection.png>]
+<Chapter-4/figs/MainShock_Sequence.png, id=322, 836.3747pt x 241.65282pt>
 File: Chapter-4/figs/MainShock_Sequence.png Graphic file (type png)
 <use Chapter-4/figs/MainShock_Sequence.png>
 Package pdftex.def Info: Chapter-4/figs/MainShock_Sequence.png  used on input l
 ine 570.
 (pdftex.def)             Requested size: 406.516pt x 117.45589pt.
- [31 <./Chapter-4/figs/MainShock_Sequence.png>]) [32]
+ [32 <./Chapter-4/figs/MainShock_Sequence.png>]) [33]
 \openout2 = `Chapter-5/Chapter-5.aux'.
 
  (Chapter-5/Chapter-5.tex
 Chapter 5.
-[33
+[34
 
 
 
@@ -1912,13 +1918,13 @@ Chapter 5.
 
 pdfTeX warning: pdflatex (file ./Chapter-5/figs/StructuralModel_01.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter-5/figs/StructuralModel_01.pdf, id=329, 794.97pt x 614.295pt>
+<Chapter-5/figs/StructuralModel_01.pdf, id=332, 794.97pt x 614.295pt>
 File: Chapter-5/figs/StructuralModel_01.pdf Graphic file (type pdf)
 <use Chapter-5/figs/StructuralModel_01.pdf>
 Package pdftex.def Info: Chapter-5/figs/StructuralModel_01.pdf  used on input l
 ine 32.
 (pdftex.def)             Requested size: 451.68752pt x 349.03635pt.
-<Chapter-5/figs/fbc_PlasticHinge.png, id=330, 1346.78156pt x 472.01344pt>
+<Chapter-5/figs/fbc_PlasticHinge.png, id=333, 1346.78156pt x 472.01344pt>
 File: Chapter-5/figs/fbc_PlasticHinge.png Graphic file (type png)
 <use Chapter-5/figs/fbc_PlasticHinge.png>
 Package pdftex.def Info: Chapter-5/figs/fbc_PlasticHinge.png  used on input lin
@@ -1928,38 +1934,38 @@ e 39.
 
 pdfTeX warning: pdflatex (file ./Chapter-5/figs/StructuralModel_Section.pdf): P
 DF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Chapter-5/figs/StructuralModel_Section.pdf, id=331, 792.92636pt x 382.74092pt>
+<Chapter-5/figs/StructuralModel_Section.pdf, id=334, 792.92636pt x 382.74092pt>
 
 File: Chapter-5/figs/StructuralModel_Section.pdf Graphic file (type pdf)
 <use Chapter-5/figs/StructuralModel_Section.pdf>
 Package pdftex.def Info: Chapter-5/figs/StructuralModel_Section.pdf  used on in
 put line 48.
 (pdftex.def)             Requested size: 316.17987pt x 152.62059pt.
-[34] [35 <./Chapter-5/figs/StructuralModel_01.pdf> <./Chapter-5/figs/fbc_Plasti
-cHinge.png>] [36 <./Chapter-5/figs/StructuralModel_Section.pdf, page is rotated
+[35] [36 <./Chapter-5/figs/StructuralModel_01.pdf> <./Chapter-5/figs/fbc_Plasti
+cHinge.png>] [37 <./Chapter-5/figs/StructuralModel_Section.pdf, page is rotated
  180 degrees>]
 Overfull \hbox (1.17108pt too wide) in paragraph at lines 93--99
  [][] 
  []
 
-[37]
-<Chapter-5/figs/AnalysisFramework_01.pdf, id=425, 1107.85231pt x 470.6383pt>
+[38]
+<Chapter-5/figs/AnalysisFramework_01.pdf, id=428, 1107.85231pt x 470.6383pt>
 File: Chapter-5/figs/AnalysisFramework_01.pdf Graphic file (type pdf)
 <use Chapter-5/figs/AnalysisFramework_01.pdf>
 Package pdftex.def Info: Chapter-5/figs/AnalysisFramework_01.pdf  used on input
  line 125.
 (pdftex.def)             Requested size: 406.516pt x 172.69717pt.
- [38] [39 <./Chapter-5/figs/AnalysisFramework_01.pdf, page is rotated 90 degree
-s>]) [40]
+ [39] [40 <./Chapter-5/figs/AnalysisFramework_01.pdf, page is rotated 90 degree
+s>]) [41]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[41
+[42
 
 
-] [42] [43] [44
+] [43] [44] [45
 
 
 ]
@@ -1999,18 +2005,18 @@ Package biblatex Warning: Name format 'last-first' deprecated.
 
  (Appendix-A/Appendix-A.tex
 Appendix A.
-[45
+[46
 
 
 
 
 ]
-<Chapter-2/figs/threed.pdf, id=466, 578.16pt x 433.62pt>
+<Chapter-2/figs/threed.pdf, id=469, 578.16pt x 433.62pt>
 File: Chapter-2/figs/threed.pdf Graphic file (type pdf)
 <use Chapter-2/figs/threed.pdf>
 Package pdftex.def Info: Chapter-2/figs/threed.pdf  used on input line 9.
 (pdftex.def)             Requested size: 271.01526pt x 203.25887pt.
- [46] [47 <./Chapter-2/figs/threed.pdf>]) [48]
+ [47] [48 <./Chapter-2/figs/threed.pdf>]) [49]
 
 AED: lastpage setting LastPage
 (VictorCalderon-thesis.aux (front.aux) (Chapter-1/Chapter-1.aux)
@@ -2029,10 +2035,10 @@ Package logreq Info: Writing requests to 'VictorCalderon-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35413 strings out of 492452
- 682999 string characters out of 3129810
- 1175552 words of memory out of 3000000
- 39151 multiletter control sequences out of 15000+200000
+ 35429 strings out of 492452
+ 683552 string characters out of 3129810
+ 1180304 words of memory out of 3000000
+ 39167 multiletter control sequences out of 15000+200000
  543708 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,13n,67p,1888b,1621s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2050,9 +2056,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on VictorCalderon-thesis.pdf (56 pages, 2846738 bytes).
+Output written on VictorCalderon-thesis.pdf (57 pages, 2852716 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
+ 542 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
